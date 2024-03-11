@@ -35,9 +35,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # hay que copiar todas las variables que no sean de bash en el archivo /etc/zsh/zshenv
 # los aliases estan separados en diferentes archivos dependiendo cual comando es y est centralizado en el archivo alias
 
-# hacemos un fetch al iniciar una shell
-neofetch
-
 # Aliases
 source "$XDG_CONFIG_HOME"/zsh/alias/alias.zsh
 
