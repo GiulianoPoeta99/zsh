@@ -112,6 +112,22 @@ alias fzfd='fzf --preview "bat --color=always --style=numbers --line-range=:500 
 # paru = yay
 alias yay='paru'
 
+cdup() {
+  local count=${1:-1}
+  local dots=""
+  
+  # Construir la cadena de puntos para cd..
+  for ((i = 0; i < count; i++)); do
+    dots+=".."
+    if [ $i -lt $((count - 1)) ]; then
+      dots+="/"
+    fi
+  done
+  
+  # Ejecutar el comando cd con la cadena construida
+  cd $dots
+}
+
 # ********************************************************************************************************************************************************
 #
 source "$XDG_CONFIG_HOME"/zsh/alias/list.zsh # ls 
